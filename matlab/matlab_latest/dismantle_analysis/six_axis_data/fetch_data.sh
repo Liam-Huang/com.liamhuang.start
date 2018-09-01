@@ -1,0 +1,9 @@
+#!/bin/bash 
+
+perl deal_orignal_data_file.pl six_axis_dismantle_2s_800HZ_256.txt
+perl deal_orignal_data_file.pl six_axis_dismantle_static_waggle_2s_800Hz_256.txt
+perl deal_orignal_data_file.pl six_axis_drag_2s_800HZ_256.txt
+perl deal_orignal_data_file.pl six_axis_fan_work_shake_2s_800HZ_256.txt
+perl deal_orignal_data_file.pl six_axis_static_2s_800Hz_256.txt
+perl deal_orignal_data_file.pl six_axis_waggle_2s_800HZ_256.txt
+perl deal_orignal_data_file.pl six_axis_walk_2s_800HZ_256.txt

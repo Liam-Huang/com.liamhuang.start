@@ -1,0 +1,5 @@
+Algorithm demo:
+https://doc.zeaho.com/pages/viewpage.action?pageId=99450962
+
+java study: 
+http://www.runoob.com/java/java-inheritance.html
