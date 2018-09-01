@@ -1,0 +1,120 @@
+GitHub wiki:
+	https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+
+Basic Command:
+	git config --global user.mail / user.name
+	git config --list 
+	git init
+	git clone
+	git branch  feature/new_test
+	git checkout 
+	git add 
+	git commit 
+	git pull 
+	git push 
+	git fetch
+	git diff 
+	git merge 
+	git log 
+	git status 
+
+Branch Management:
+	Master branch  <- FixBug  HEAD(Harsh value like CL)
+	Develop branch <- Release
+	Feature branch <- Bug
+	
+	Create, Merge and Delete branch:
+		create branch: git branch dev
+		switch branch: git checkout dev
+		check exist and active branch: git branch (* means active branch)
+		add file to a commit: git add readme.txt
+		commit to online:     git commit -m "branch test"
+		switch branch: git checkout master
+		merge branch:  git merge dev
+		delete branch: git branch -d dev
+		check exist branch: git branch
+
+	Solve conflict:
+		create branch: git branch feature1
+		switch branch: git checkout feature1
+		add file to commit: git add readme.txt
+		commit to online:   git commit -m "AND simple"
+		switch branch: git checkout master
+		modify readme.txt: Creating a new branch is quick & simple
+		add file to commit: git add readme.txt
+		commit to online:   git commit -m "& simple"
+		merge branch:  git merge feature1 (merge failed)
+		
+		check merge status detail: git status (readme.txt)
+		modify readme.txt: Creating a new branch is quick and simple
+		add file to commit: git add readme.txt
+		commit to online:   git commit -m "confict fixed"
+		check file branch history: git log -graph
+		delete branch: git branch -d feature1
+
+	Merge Branch disable fast forward mode option: 
+		merge branch: git merge --no-ff -m "merge with no-ff" develop 
+		note:		  delete branch will miss merge branch infomation on master branch with fast foreward	
+
+	Bug Branch:
+		Before you fix bug, you need save your local develop branch
+		check local branch: git status
+		saved local branch: git stash
+		switch to master branch: git checkout master
+		create bug branch:  git branch issue-101
+		switch bug branch:  git checkout issue-101
+		add file to commit: git add readme.txt
+		commit to online:   git commit -m "fix bug 101"
+		switch to master branch: git checkout master
+		merge branch:       git merge --no-ff -m "merged bug fix 101" issue-101
+		switch to dev branch: git checkout develop
+		check local branch status: git status (nothing to commit, working tree clean)
+		check stash status: git stash list
+		recovery branch from stash: git stash pop (stash stack FILO)
+
+	Feature Branch:
+		create new branch: git branch feature-vulcan
+		switch to branch:  git checkout feature-vulcan
+		add file to branch: git add vulcan.py
+		check local branch status: git status
+		commit to online branch: git commit -m "add feature vulcan"
+		switch to branch: git checkout develop
+		merge branch: git merge --no-ff -m "merged vulcan branch" feature-vulcan
+		delete branch: git branch -d feature-vulcan
+		Note: If you want execute delete before merge, delete branch command-> git branch -D feature-vulcan
+
+	Cooperation:
+		check remote lib info: git remote (orignal)
+		check remote lib info detai: git remote -v
+		sumbit master branch to remote branch: git push orignal master
+		sumbit develop branch to remote branch: git push orignal develop
+		which branch need to be pushed: master/develop/feature(cooperation)/bug(timing need)
+		
+		clone remote lib to local master branch: git clone git@github:michaelliao/learngit.git
+		check local branch: git branch (*master)
+		create remote develop branch to local and switch to develop branch: git checkout -b develop orignal/develop
+		add file to commit: git add env.txt
+		commit file to branch: git commit -m "add env"
+		push branch to orignal: git push orignal develop
+		If push command failed, conflict need slove:
+		pull remote code to local branch: git pull
+		If pull also failed, no tracking information for current branch:
+		setting tracking information for current branch: git branch --set-upstream-to=orignal/develop develop
+		pull remote code to local branch: git pull
+		solve conflict by hand and then add/commit/push 
+
+	
+	Tag:
+		create tag: git tag v1.0
+		check tag: git tag (v1.0)
+		check commit id: git log --pretty=oneline -abbrev-commit (commit_id at first)
+		create tag at commit id: git tag v0.9 commit_id
+		check tag: git tag (v0.9/v1.0 ->  alphabet number)
+		show tag status: git show v0.9
+		create tag with commit at commit id: git tag v1.0 -m "version 1.0 released" commit_id
+		delete tag: git tag -d v1.0
+		push remote code with tag: git push orignal v1.0
+		push remote code with all tags: git push orignal --tags
+		delete remote tag: git tag -d v0.9 / git push orignal :refs/tags/v0.9
+
+

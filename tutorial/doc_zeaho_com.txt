@@ -1,0 +1,27 @@
+Algorithm demo:
+https://doc.zeaho.com/pages/viewpage.action?pageId=99450962
+
+
+Java study: 
+http://www.runoob.com/java/java-inheritance.html
+
+Typical Algorithm Implement: 
+http://www.cnblogs.com/qy5201314/archive/2012/07/21/2602228.html
+
+Intellij IDEA Keys
+http://www.cnblogs.com/bluestorm/archive/2013/05/20/3087889.html
+
+Apache Math
+http://commons.apache.org/proper/commons-math/
+
+Maven Repository
+https://www.mvnrepository.com/
+
+Spring Boot
+https://spring.io/projects/spring-boot
+
+GitHub
+https://github.com/Liam-Huang/com.liamhuang.start
+
+Git Tutorial
+https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
