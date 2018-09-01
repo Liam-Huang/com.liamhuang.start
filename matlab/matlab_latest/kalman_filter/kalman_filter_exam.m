@@ -3,6 +3,7 @@ close all
 clear
 clc
 
+
 %%
 N=100;
 x(1)=0;
