@@ -1,0 +1,10 @@
+Export:
+	  1. save  filename.txt  data_src  -ascii;   科学计数
+	  2. dlmwrite(filename.txt, data_src, ' '); ' '表示数据分割符  数据格式未对齐
+	  3. xlswrite(filename.xls, data_src);  
+	  4. fid = fopen(filename.txt, 'w');  %data_formate control
+		  fprintf(fid, 'x     y\n');
+		  % two values appear on each row of the file
+		  fprintf(fid, '%1.4f    %1.4f\n', data);
+		  fclose(fid);
+	

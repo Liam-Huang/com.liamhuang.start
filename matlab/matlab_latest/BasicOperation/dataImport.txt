@@ -1,0 +1,15 @@
+Import: 
+	TXT type data: 
+		1.  load     (one data/one line)
+		2.  importdata (mult datas/one line)
+		3. fopen, fscanf, 
+	 
+	JPG type data:
+		1. importdata    (plot: image)
+		2. open file in matlab and auto-generate importdata function
+	
+	CSV XLS type data:
+		1. open file in matlab and auto-generate importdata function
+		
+Export:
+	

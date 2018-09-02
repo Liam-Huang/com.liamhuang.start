@@ -1,0 +1,37 @@
+命令：
+	title：命令用于在图表上设置标题。
+	xlabel和ylabel：命令沿x轴和y轴生成标签。
+	grid on：命令用于将网格线放在图形上。
+	axis equal：命令允许生成具有相同比例因子的绘图和两个轴上的空格。
+	axis square：命令生成一个方形图。
+	hold on: 命令用于在已画好的图形上添加新的图形 
+	subplot:  命令用于产生多个图片
+	legend： 命令用于在图片右上角添加线性标题 
+			plot(x1,y1,'r',x2,y2,'b');
+			legend('y1_label','y2_label')
+	
+
+颜色线型：
+    颜色                            线性
+    y           yellow            ·             点线
+    m         magenta        ○             圈线
+    c          cyan               ×            ×线
+    r           red                ＋            ＋字线 
+    g          green            －             实线
+    b          blue               *              星形线
+    w         white              ：            虚线
+    k          black             －.  or --   点划线
+	
+直方图：
+	bar(x,y), xlabel('xxx'), ylabel('xxx')
+	
+等高线：
+	[x,y] = meshgrid(-5:0.1:5,-5:0.1:5); %independent variables
+	z = x.^2 + y.^2;                     			% our function
+	[C, h] = contour(x,y,g);             		% call the contour function
+	set(h,'ShowText','on','TextStep',get(h,'LevelStep')*2);
+
+三维图：
+	[x,y] = meshgrid(-2:0.2:2, -4:0.2:4);
+	z = x .* exp(-x.^2 - y.^2);
+	surf(x, y, z); / mesh(x, y, z);  %former: color figure  after: only line
